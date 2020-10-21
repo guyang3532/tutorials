@@ -1071,6 +1071,8 @@ def trainIters(model_name, voc, pairs, encoder, decoder, encoder_optimizer, deco
         input_variable, lengths, target_variable, mask, max_target_len = training_batch
 
         # Run a training iteration with batch
+        import pdb
+        pdb.set_trace()
         loss = train(input_variable, lengths, target_variable, mask, max_target_len, encoder,
                      decoder, embedding, encoder_optimizer, decoder_optimizer, batch_size, clip)
         print_loss += loss
